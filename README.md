@@ -1,24 +1,10 @@
-Il contient tout : présentation, architecture, installation, API, roadmap, licence, etc.
 
-# 🧮 Calculatrice Scientifique Web
-
-Une **calculatrice scientifique complète**, responsive et moderne, développée avec **HTML / CSS / JavaScript** pour l’interface et **Python (Flask + SymPy)** pour la logique de calcul.
-
----
-
-## 🚀 Objectif
-
-Créer une calculatrice scientifique accessible via un navigateur web, capable d’exécuter des calculs simples et complexes (trigonométrie, logarithmes, puissances, racines, etc.) en respectant l’ordre des opérations.
-
----
-
+#🧮 Calculatrice Scientifique 
 ## 🏗️ Architecture Technique
-
 ### 🔸 Front-end
 - **HTML / CSS (Grid)** : structure et style de l’interface utilisateur.
 - **JavaScript (Fetch API)** : communication asynchrone avec le serveur.
 - **Responsive Design** : interface fluide adaptée aux écrans PC, tablette, mobile.
-
 ### 🔸 Back-end
 - **Framework : Flask**
   - Fournit la page principale (`index.html`).
@@ -28,31 +14,25 @@ Créer une calculatrice scientifique accessible via un navigateur web, capable d
   - [`mpmath`](https://mpmath.org) : calculs haute précision.
   - [`pydantic`](https://docs.pydantic.dev) : validation des requêtes API.
   - [`pytest`](https://pytest.org) : tests unitaires.
-
----
-
 ## 📂 Arborescence du projet
-
-
-
 calculator/
 │
-├── app.py # Point d'entrée Flask
+├── app.py 
 │
 ├── calc/
 │ ├── init.py
-│ ├── engine.py # Moteur de calcul sécurisé
-│ └── schemas.py # Modèles Pydantic (validation JSON)
+│ ├── engine.py
+│ └── schemas.py
 │
 ├── templates/
-│ └── index.html # Interface principale
+│ └── index.html
 │
 ├── static/
-│ ├── styles.css # Design et responsive
-│ └── app.js # Gestion clavier & appels API
+│ ├── styles.css
+│ └── app.js 
 │
 ├── tests/
-│ └── test_engine.py # Tests unitaires de la logique Python
+│ └── test_engine.py
 │
 ├── .venv/ # Environnement virtuel
 └── README.md
@@ -180,4 +160,4 @@ Projet sous licence MIT — libre de réutilisation, modification et distributio
 👨‍💻 Auteur
 Sininou Schenider
 📍 Projet personnel de développement web & Python
-🧠 Contact : [ajoute ton email ou lien GitHub ici]
+🧠 Contact : enrickminko@gmail.com 
