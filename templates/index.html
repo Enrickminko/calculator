@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculatrice Scientifique(MINKO SCHNEIDER)</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="topbar">
+      <h1>SILINOU SCHNEIDER Calculator</h1>
+      <div class="modes">
+        <label for="angle">Angle</label>
+        <select id="angle" aria-label="Mode d'angle">
+          <option value="rad">rad</option>
+          <option value="deg">deg</option>
+        </select>
+        <label for="prec">Précision</label>
+        <input id="prec" type="number" min="10" max="80" value="24" />
+      </div>
+    </header>
+
+    <section class="display">
+      <output id="history" aria-live="polite" class="history"></output>
+      <input id="expr" class="expr" autocomplete="off" placeholder="ex: sin(30)+log(100,10)^2" />
+      <div class="result" id="result" aria-live="polite">0</div>
+      <div id="error" class="error" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="grid" role="group" aria-label="clavier de calculatrice">
+      <button data-fn="fn" data-insert="sin(" aria-label="sinus">sin</button>
+      <button data-fn="fn" data-insert="cos(" aria-label="cosinus">cos</button>
+      <button data-fn="fn" data-insert="tan(" aria-label="tangente">tan</button>
+      <button data-fn="fn" data-insert="ln(" aria-label="logarithme népérien">ln</button>
+      <button data-fn="fn" data-insert="log(" aria-label="logarithme base 10">log</button>
+      <button data-fn="fn" data-insert="sqrt(" aria-label="racine carrée">√</button>
+
+      <button data-insert="(">(</button>
+      <button data-insert=")">)</button>
+      <button data-insert="pi" aria-label="pi">π</button>
+      <button data-insert="e" aria-label="constante e">e</button>
+      <button data-op="pow" data-insert="^" aria-label="puissance">^</button>
+      <button data-fn="del" aria-label="effacer">DEL</button>
+      <button data-fn="clear" class="danger" aria-label="tout effacer">AC</button>
+      <button data-insert="," aria-label="séparateur d'arguments">,</button>
+      <button data-insert="abs(">|x|</button>
+      <button data-insert="floor(">⌊x⌋</button>
+      <button data-insert="ceil(">⌈x⌉</button>
+      <button data-insert="!" aria-label="factorielle">n!</button>
+      <button data-insert="7">7</button>
+      <button data-insert="8">8</button>
+      <button data-insert="9">9</button>
+      <button data-insert="/" aria-label="division">÷</button>
+      <button data-insert="*" aria-label="multiplication">×</button>
+      <button data-fn="ans" aria-label="insérer le dernier résultat">Ans</button>
+
+      <button data-insert="4">4</button>
+      <button data-insert="5">5</button>
+      <button data-insert="6">6</button>
+      <button data-insert="-">−</button>
+      <button data-insert="+">+</button>
+      <button data-insert="^2" aria-label="carré">x²</button>
+
+      <button data-insert="1">1</button>
+      <button data-insert="2">2</button>
+      <button data-insert="3">3</button>
+      <button data-insert="." aria-label="point décimal">.</button>
+      <button data-fn="percent" aria-label="pourcentage">%</button>
+      <button data-fn="eval" class="equals" aria-label="calculer">=</button>
+
+      <button class="span-2" data-insert="0">0</button>
+      <button data-insert="00">00</button>
+      <button data-fn="neg" aria-label="changer le signe">±</button>
+      <button data-insert="," aria-label="séparateur encore">,</button>
+      <button data-insert="(" aria-label="ouvrir parenthèse">(</button>
+      <button data-insert=")" aria-label="fermer parenthèse">)</button>
+    </section>
+
+    <footer class="foot">
+      <small>Clavier: utilisez Enter (=), Backspace (DEL), ^ pour puissance, parenthèses, etc.</small>
+    </footer>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
+
